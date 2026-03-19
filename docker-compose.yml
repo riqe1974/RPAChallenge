@@ -1,0 +1,27 @@
+services:
+  rpa:
+    build:
+      context: .
+      dockerfile: RPA/Dockerfile
+    volumes:
+      - quotes-data:/app/data
+    environment:
+      - ScrapingIntervalMinutes=5
+      - TargetUrl=http://quotes.toscrape.com/
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/quotes.db
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - quotes-data:/app/data
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/quotes.db
+    restart: unless-stopped
+
+volumes:
+  quotes-data:

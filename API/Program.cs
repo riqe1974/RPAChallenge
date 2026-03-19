@@ -1,11 +1,26 @@
+using API.Repositories;
+using Microsoft.Data.Sqlite;
+using Shared.Interfaces;
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configurar Serilog
+builder.Host.UseSerilog((context, config) =>
+{
+    config.ReadFrom.Configuration(context.Configuration)
+          .Enrich.FromLogContext()
+          .WriteTo.Console();
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configurar repositório SQLite
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=/data/quotes.db";
+builder.Services.AddSingleton<IQuoteRepository>(sp => new SqliteQuoteRepository(connectionString));
 
 var app = builder.Build();
 
@@ -16,8 +31,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

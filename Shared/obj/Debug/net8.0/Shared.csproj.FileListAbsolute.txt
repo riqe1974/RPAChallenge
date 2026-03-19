@@ -9,3 +9,4 @@ C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.dll
 C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\refint\Shared.dll
 C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.pdb
 C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\ref\Shared.dll
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.sourcelink.json
