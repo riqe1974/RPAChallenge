@@ -1,0 +1,11 @@
+C:\fonte\RPAChallenge\Shared\bin\Debug\net8.0\Shared.deps.json
+C:\fonte\RPAChallenge\Shared\bin\Debug\net8.0\Shared.dll
+C:\fonte\RPAChallenge\Shared\bin\Debug\net8.0\Shared.pdb
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.cs
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.dll
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\refint\Shared.dll
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\Shared.pdb
+C:\fonte\RPAChallenge\Shared\obj\Debug\net8.0\ref\Shared.dll
